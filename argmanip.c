@@ -6,7 +6,7 @@
 
 char **manipulate_args(int argc, const char *const *argv, int (*const manip)(int))
 {
-    char** manipulatedArgs = (char**) malloc(argc * sizeof(char*));
+    char** manipulatedArgs = (char**) malloc((argc + 1) * sizeof(char*));
 
     for (int i = 0; i < argc; i++)
     {
@@ -21,6 +21,8 @@ char **manipulate_args(int argc, const char *const *argv, int (*const manip)(int
 
         manipulatedArgs[i] = newStr;
     }
+
+    manipulatedArgs[argc] = NULL;
 
     return manipulatedArgs;
 }

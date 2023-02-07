@@ -1,0 +1,5 @@
+.vscode/
+*.o
+nyuc/
+argmanip.h.gch/
+.gitignore.swp/
